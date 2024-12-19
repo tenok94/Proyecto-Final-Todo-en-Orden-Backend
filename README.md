@@ -21,3 +21,35 @@ Este es el backend de la aplicación "Todo en Orden", desarrollado con **Node.js
    git clone https://github.com/usuario/backend-repo.git
    cd backend-repo
 
+2. **Instalar dependencias**
+npm install
+
+3. **Configurar variables de entorno:**
+Crea un archivo .env en la raíz del proyecto
+
+4. **Iniciar el servidor:**
+npm start
+Endpoints del API
+GET /tareas:
+
+Descripción: Obtiene todas las tareas.
+Respuesta: Lista de tareas en formato JSON.
+POST /tareas:
+
+Descripción: Crea una nueva tarea.
+Parámetros requeridos: tarea, descripcion, prioridad, estado.
+PUT /tareas/:id:
+
+Descripción: Actualiza una tarea por su ID.
+Parámetros requeridos: tarea, descripcion, prioridad, estado.
+DELETE /tareas/:id:
+
+Descripción: Elimina una tarea por su ID.
+Despliegue
+El backend está desplegado en Render:
+
+URL: https://proyecto-final-todo-en-orden-backend.onrender.com
+Flujo de trabajo
+Recepción de peticiones: El backend recibe las peticiones del frontend.
+Procesamiento de datos: Los datos se procesan y se almacenan/actualizan/eliminan en MongoDB.
+Respuesta al frontend: El backend envía la información procesada al frontend.
