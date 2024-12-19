@@ -10,7 +10,18 @@ El backend de "Todo en Orden" es el motor que gestiona las peticiones, procesand
 .**Mongoose**: ODM para interactuar con MongoDB.
 .**Render**: Plataforma utilizada para el despliegue del backend.
 
-backend/ ├── config/ # Configuración de la base de datos │ └── db.js # Conexión a MongoDB ├── models/ # Modelos de datos │ └── tareamodel.js # Esquema de la tarea ├── routes/ # Definición de rutas de la API │ └── tareas.js # Rutas relacionadas con las tareas ├── .env # Variables de entorno (excluido del repositorio) ├── app.js # Archivo principal del servidor ├── package.json # Dependencias y scripts del proyecto └── README.md # Este archivo
+📂 **Estructura del Proyecto**
+📦 backend/
+├── 📁 config/         # Configuración de la base de datos
+│   └── db.js          # Conexión a MongoDB
+├── 📁 models/         # Modelos de datos
+│   └── tareamodel.js  # Esquema de la tarea
+├── 📁 routes/         # Definición de rutas de la API
+│   └── tareas.js      # Rutas relacionadas con las tareas
+├── .env               # Variables de entorno (excluido del repositorio)
+├── app.js             # Archivo principal del servidor
+├── package.json       # Dependencias y scripts del proyecto
+└── README.md          # Este archivo
 
 
 📡 Endpoints del API
