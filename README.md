@@ -4,11 +4,11 @@
 El backend de "Todo en Orden" es el motor que gestiona las peticiones, procesando y almacenando las tareas en una base de datos MongoDB. Está diseñado para trabajar en conjunto con el frontend, proporcionando una API REST para realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar).
 
 🛠 Tecnologías Utilizadas
-.Node.js: Entorno de ejecución para JavaScript en el servidor.
-.Express.js: Framework para la creación de rutas y manejo del servidor.
-.MongoDB: Base de datos no relacional para almacenar las tareas.
-.Mongoose: ODM para interactuar con MongoDB.
-.Render: Plataforma utilizada para el despliegue del backend.
+.**Node.js**: Entorno de ejecución para JavaScript en el servidor.
+.**Express.js**: Framework para la creación de rutas y manejo del servidor.
+.**MongoDB**: Base de datos no relacional para almacenar las tareas.
+.**Mongoose**: ODM para interactuar con MongoDB.
+.**Render**: Plataforma utilizada para el despliegue del backend.
 
 📂 **Estructura del Proyecto**
 📦 backend/
