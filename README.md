@@ -10,7 +10,7 @@ El backend de "Todo en Orden" es el motor que gestiona las peticiones, procesand
 .Mongoose: ODM para interactuar con MongoDB.
 .Render: Plataforma utilizada para el despliegue del backend.
 
-📂 Estructura del Proyecto
+📂 **Estructura del Proyecto**
 📦 backend/
 ├── 📁 config/         # Configuración de la base de datos
 │   └── db.js          # Conexión a MongoDB
