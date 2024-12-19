@@ -48,7 +48,7 @@ const configureMiddlewares = () => {
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
 
-    const allowedOrigins = ["http://localhost:3000", "https://mi-dominio-frontend.com"];
+    const allowedOrigins = ["http://localhost:3000", "https://proyecto-final-todo-en-orden-frontend.vercel.app/"];
     app.use(cors({
         origin: (origin, callback) => {
             if (!origin || allowedOrigins.includes(origin)) {
