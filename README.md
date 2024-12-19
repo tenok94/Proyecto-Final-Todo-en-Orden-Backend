@@ -1,4 +1,5 @@
 📝 Proyecto Final - Todo en Orden (Backend)
+
 🚀 Descripción
 El backend de "Todo en Orden" es el motor que gestiona las peticiones, procesando y almacenando las tareas en una base de datos MongoDB. Está diseñado para trabajar en conjunto con el frontend, proporcionando una API REST para realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar).
 
@@ -81,10 +82,10 @@ El backend está desplegado en Render y se puede acceder a través del siguiente
 🖼 Capturas de Pantalla
 
 1️⃣ Logs de Render:
-![Conexión a la base de datos y despliegue exitoso.](../backend/images/render-logs.png)
+![Conexión a la base de datos y despliegue exitoso.](./images/render-logs.png)
 
 2️⃣ Respuesta de /tareas:
-![Ejemplo de tareas almacenadas en la base de datos.](../backend/images/Base%20de%20datos.png)
+![Ejemplo de tareas almacenadas en la base de datos.](./images/Base%20de%20datos.png)
 
 🔄 Flujo de Trabajo
 1. Recepción de Peticiones: El backend recibe las peticiones enviadas desde el  
