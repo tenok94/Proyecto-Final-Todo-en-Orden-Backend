@@ -35,42 +35,50 @@
 // app.listen(PORT, () => {
 //     console.log(`Servidor corriendo en el puerto ${PORT}`);
 // });
-const express = require("express");
-const cors = require("cors");
-const dbConnected = require("./config/db");
-const tareaRoutes = require("./routes/tareas");
-
+const express = require('express');
+const cors = require('cors');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-// Función para configurar middlewares
-const configureMiddlewares = () => {
-    app.use(express.json());
-    app.use(express.urlencoded({ extended: true }));
+// Permitir los orígenes que necesites
+const allowedOrigins = [
+    'https://proyecto-final-todo-en-orden-frontend.vercel.app', // Dominio de tu frontend en producción
+    'http://localhost:3000', // Dominio de tu frontend local (opcional, para pruebas locales)
+];
 
-    const allowedOrigins = ["http://localhost:3000", "https://proyecto-final-todo-en-orden-frontend.vercel.app/"];
-    app.use(cors({
-        origin: (origin, callback) => {
-            if (!origin || allowedOrigins.includes(origin)) {
-                return callback(null, true);
-            }
-            callback(new Error("Origen no permitido por CORS"));
-        },
-    }));
+// Configurar CORS
+const corsOptions = {
+    origin: (origin, callback) => {
+        // Permitir solicitudes sin origen (por ejemplo, herramientas como Postman)
+        if (!origin) return callback(null, true);
+
+        // Comprobar si el origen está en la lista de permitidos
+        if (allowedOrigins.indexOf(origin) === -1) {
+            const msg = 'El CORS bloqueó este origen porque no está permitido.';
+            return callback(new Error(msg), false);
+        }
+
+        return callback(null, true);
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
+    credentials: true, // Habilitar credenciales si es necesario (opcional)
 };
 
-configureMiddlewares();
+app.use(cors(corsOptions));
 
-dbConnected(); // Conexión a la base de datos
+// Middlewares
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use("/tareas", tareaRoutes);
+// Tus rutas
+const tareasRoutes = require('./routes/tareas');
+app.use('/tareas', tareasRoutes);
 
-// Manejo de errores global
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).json({ error: "Ocurrió un error interno en el servidor" });
-});
+// Puerto
+const PORT = process.env.PORT || 3000;
 
+// Conexión del servidor
 app.listen(PORT, () => {
-    console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
+
+module.exports = app;
