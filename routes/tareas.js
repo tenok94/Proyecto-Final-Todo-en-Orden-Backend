@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const ModelTarea = require("../models/tareamodel.js");
 
-//mostrar las tareas
+//mostrar las tareas :D
 router.get("/tareas", async (req, res) => {
     try {
         const tareas = await ModelTarea.find();
