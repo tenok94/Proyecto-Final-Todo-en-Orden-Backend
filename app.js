@@ -60,6 +60,8 @@ app.use(cors(corsOptions));
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use("/", require("./routes/tareas.js"));
+
 
 // Conexión a MongoDB
 mongoose
