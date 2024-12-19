@@ -3,7 +3,7 @@ const tareaSchema = new mongoose.Schema(
     {
         tarea: { 
             type: String, 
-            required: true 
+            required: [true, "El nombre de la tarea es obligatorio"], 
         },
 
         descripcion: 
