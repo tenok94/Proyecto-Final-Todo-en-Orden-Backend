@@ -7,7 +7,7 @@ const app = express();
 
 // Configuración de CORS
 const corsOptions = {
-    origin: "https://proyecto-final-todo-en-orden-frontend-vkrzenqro.vercel.app/", // Dominio del frontend en Vercel
+    origin: "*", // Dominio del frontend en Vercel o * para probar
     methods: "GET,POST,PUT,DELETE", // Métodos permitidos
     allowedHeaders: "Content-Type,Authorization", // Cabeceras permitidas
 };
