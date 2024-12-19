@@ -12,6 +12,7 @@ El backend de "Todo en Orden" es el motor que gestiona las peticiones, procesand
 
 📂 **Estructura del Proyecto**
 📦 backend/
+
 ├── 📁 config/         # Configuración de la base de datos
 │   └── db.js          # Conexión a MongoDB
 ├── 📁 models/         # Modelos de datos
