@@ -24,6 +24,21 @@ El backend de "Todo en Orden" es el motor que gestiona las peticiones, procesand
 +├── package.json       # Dependencias y scripts del proyecto
 +└── README.md          # Este archivo
 
+📂 **Estructura del Proyecto**
+
+- 📦 **backend/**
+  - 📁 **config/**  
+    - `db.js`: Conexión a MongoDB
+  - 📁 **models/**  
+    - `tareamodel.js`: Esquema de la tarea
+  - 📁 **routes/**  
+    - `tareas.js`: Rutas relacionadas con las tareas
+  - `.env`: Variables de entorno (excluido del repositorio)
+  - `app.js`: Archivo principal del servidor
+  - `package.json`: Dependencias y scripts del proyecto
+  - `README.md`: Este archivo
+
+
 
 📡 Endpoints del API
 🎯 Tareas
