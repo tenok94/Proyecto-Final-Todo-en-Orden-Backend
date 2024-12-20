@@ -1,9 +1,9 @@
-📝 Proyecto Final - Todo en Orden (Backend)
+## 📝 Proyecto Final - Todo en Orden (Backend)
 
 🚀 Descripción
 El backend de "Todo en Orden" es el motor que gestiona las peticiones, procesando y almacenando las tareas en una base de datos MongoDB. Está diseñado para trabajar en conjunto con el frontend, proporcionando una API REST para realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar).
 
-🛠 **Tecnologías Utilizadas**
+## 🛠 **Tecnologías Utilizadas**
 
 - **Node.js**: Entorno de ejecución para JavaScript en el servidor.
 - **Express.js**: Framework para la creación de rutas y manejo del servidor.
@@ -12,7 +12,7 @@ El backend de "Todo en Orden" es el motor que gestiona las peticiones, procesand
 - **Render**: Plataforma utilizada para el despliegue del backend.
 
 
-📂 **Estructura del Proyecto**
+## 📂 **Estructura del Proyecto**
 
 - 📦 **backend/**
   - 📁 **config/**  
@@ -28,13 +28,13 @@ El backend de "Todo en Orden" es el motor que gestiona las peticiones, procesand
 
 
 
-📡 Endpoints del API
+## 📡 Endpoints del API
 🎯 Tareas
 1. GET /tareas
 
-    . Descripción: Devuelve todas las tareas almacenadas.
-    . Respuesta: Lista de tareas en formato JSON.
-    . Ejemplo:
+    - Descripción: Devuelve todas las tareas almacenadas.
+    - Respuesta: Lista de tareas en formato JSON.
+    - Ejemplo:
             [
                 {
                 "_id": "12345",
@@ -47,8 +47,8 @@ El backend de "Todo en Orden" es el motor que gestiona las peticiones, procesand
 
 2. POST /tareas
 
-    . Descripción: Crea una nueva tarea.
-    . Parámetros Requeridos:
+    - Descripción: Crea una nueva tarea.
+    - Parámetros Requeridos:
                 {
                 "tarea": "String",
                 "descripcion": "String",
@@ -57,34 +57,38 @@ El backend de "Todo en Orden" es el motor que gestiona las peticiones, procesand
                 }
 3. PUT /tareas/:id
 
-    . Descripción: Actualiza una tarea existente.
-    . Parámetros Requeridos: Mismos que en el POST.
+    - Descripción: Actualiza una tarea existente.
+    - Parámetros Requeridos: Mismos que en el POST.
 
 4. DELETE /tareas/:id
 
-    . Descripción: Elimina una tarea por su ID.
+    - Descripción: Elimina una tarea por su ID.
 
-⚙️ Cómo Correr el Proyecto
-    1. Clonar el repositorio:
-            git clone https://github.com/usuario/backend-repo.git
-            cd backend-repo
+## ⚙️ Cómo Correr el Proyecto
 
-    2. Instalar dependencias:
-            npm install
-
-    3. Configurar variables de entorno: Crear un archivo .env en la raíz del  
-       proyecto.
-
-    4. Iniciar el Servidor:
-        npm start
-
-🚀 Despliegue
+ 1. Clonar el Repo:
+   ```
+    https://github.com/tenok94/Proyecto-Final-Todo-en-Orden-Backend.git
+   ```
+2. Instalar Dependencias:
+    ```
+    npm install
+    ```
+3. Iniciar el servidor de desarrollo:
+   ```
+    npm start
+   ```
+4. Configurar variables de entorno:
+   ```
+   Crear un archivo .env en la raíz del proyecto.
+   ```
+## 🚀 Despliegue
 
 El backend está desplegado en Render y se puede acceder a través del siguiente enlace:
-        https://proyecto-final-todo-en-orden-backend.onrender.com
+- https://proyecto-final-todo-en-orden-backend.onrender.com
 
 
-🖼 Capturas de Pantalla
+## 🖼 Capturas de Pantalla
 
 1️⃣ Logs de Render:
 ![Conexión a la base de datos y despliegue exitoso.](./images/render-logs.png)
@@ -92,12 +96,12 @@ El backend está desplegado en Render y se puede acceder a través del siguiente
 2️⃣ Respuesta de /tareas:
 ![Ejemplo de tareas almacenadas en la base de datos.](./images/Base%20de%20datos.png)
 
-🔄 Flujo de Trabajo
-1. Recepción de Peticiones: El backend recibe las peticiones enviadas desde el  
-   frontend.
+## 🔄 Flujo de Trabajo
+1. Recepción de Peticiones:
+   - El backend recibe las peticiones enviadas desde el frontend.
    
-2. Procesamiento: Valida los datos y realiza las operaciones correspondientes en 
-   MongoDB.
+2. Procesamiento:
+   - Valida los datos y realiza las operaciones correspondientes en MongoDB.
 
-3. Respuesta: Devuelve la información procesada al frontend para su 
-   visualización.
+3. Respuesta:
+   - Devuelve la información procesada al frontend para su visualización.
